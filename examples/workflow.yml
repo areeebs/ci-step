@@ -1,0 +1,16 @@
+name: demo
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Say hello
+        run: echo "hello from ci-step"
+      - name: Show date
+        run: date
+      - name: Do math
+        run: |
+          echo "2 + 2 ="
+          expr 2 + 2
